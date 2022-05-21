@@ -13,6 +13,8 @@
 		620964C52838FDE50051B871 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620964C42838FDE50051B871 /* Preview Assets.xcassets */; };
 		620964CD2838FF8B0051B871 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620964CC2838FF8B0051B871 /* CryptoModel.swift */; };
 		620964D02838FFC30051B871 /* CryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620964CF2838FFC30051B871 /* CryptoView.swift */; };
+		6263FE1828391E7900077948 /* MyWalletPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263FE1728391E7900077948 /* MyWalletPage.swift */; };
+		6263FE1A2839217E00077948 /* TrandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263FE192839217E00077948 /* TrandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		620964C42838FDE50051B871 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		620964CC2838FF8B0051B871 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		620964CF2838FFC30051B871 /* CryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoView.swift; sourceTree = "<group>"; };
+		6263FE1728391E7900077948 /* MyWalletPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletPage.swift; sourceTree = "<group>"; };
+		6263FE192839217E00077948 /* TrandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				620964CF2838FFC30051B871 /* CryptoView.swift */,
+				6263FE192839217E00077948 /* TrandingView.swift */,
+				6263FE1728391E7900077948 /* MyWalletPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,7 +168,9 @@
 				620964CD2838FF8B0051B871 /* CryptoModel.swift in Sources */,
 				620964C02838FDE10051B871 /* ContentView.swift in Sources */,
 				620964BE2838FDE10051B871 /* CryptoAppApp.swift in Sources */,
+				6263FE1828391E7900077948 /* MyWalletPage.swift in Sources */,
 				620964D02838FFC30051B871 /* CryptoView.swift in Sources */,
+				6263FE1A2839217E00077948 /* TrandingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
