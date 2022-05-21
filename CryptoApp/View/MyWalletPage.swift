@@ -54,6 +54,7 @@ struct MyWalletPage: View {
             }.navigationBarHidden(true)
             .background(Color("Background2"))
         }
+        .accentColor(.white)
     }
 }
 

@@ -85,7 +85,7 @@ struct CryptoDetails: View {
                 }
             }.padding()
         }.navigationBarTitleDisplayMode(.inline)
-            .foregroundColor(.white)
+            
     }
 }
 
