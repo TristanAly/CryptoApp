@@ -10,6 +10,7 @@ import SwiftUI
 struct CryptoDetails: View {
     
     let crypto: CryptoModel
+    @State var quantity: Float = 1
     
     var body: some View {
         ZStack{
@@ -38,7 +39,7 @@ struct CryptoDetails: View {
                     
                     VStack(alignment: .trailing,spacing: 10){
                         
-                        Text("\(String(format: "%.2F",crypto.value)) €")
+                        Text("\(String(format: "%.2F",quantity * crypto.value)) €")
                         
                         HStack{
                             if crypto.evolution > 0{
@@ -50,15 +51,17 @@ struct CryptoDetails: View {
                         }
                         .foregroundColor( crypto.evolution > 0 ? Color.green : Color.red)
                     }
+                    
                 }.padding()
                  .background(RoundedRectangle(cornerRadius: 10)
                  .fill(Color("Background"))
                  .frame(width: 370, height: 100))
                  .foregroundColor(.white)
+//                Text("Quantity: \(Int(quantity))")
                 Spacer()
                 HStack{
                     Button{
-                        //                code..
+                        quantity -= 1
                     } label: {
                         Text("Sell")
                             .font(.title)
@@ -69,7 +72,7 @@ struct CryptoDetails: View {
                             .cornerRadius(10)
                     }
                     Button{
-                        //                code..
+                        quantity += 1
                     } label: {
                         Text("Buy")
                             .font(.title)

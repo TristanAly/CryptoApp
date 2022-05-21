@@ -34,9 +34,6 @@ struct TrandingView: View {
                 if crypto.evolution > 0{
                     Image(systemName: "plus")
                         .font(.caption2)
-                }else {
-                    Image(systemName: "minus")
-                        .font(.caption2)
                 }
                 Text("\(String(format: "%.2F", crypto.evolution)) %")
                         .font(.caption)
