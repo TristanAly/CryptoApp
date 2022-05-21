@@ -18,7 +18,7 @@ struct CryptoView: View {
                 .resizable()
                 .frame(width: 40, height: 40)
                 .padding()
-                .background(Color("Background"))
+                .background(Color("Background2"))
                 .cornerRadius(10)
                 .padding(.horizontal)
             
@@ -50,7 +50,7 @@ struct CryptoView: View {
         }
         .foregroundColor(.white)
         .padding()
-        .background(.black.opacity(0.9))
+        .background(Color("Background"))
     }
 }
 

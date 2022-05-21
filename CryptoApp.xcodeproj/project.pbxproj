@@ -15,6 +15,7 @@
 		620964D02838FFC30051B871 /* CryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620964CF2838FFC30051B871 /* CryptoView.swift */; };
 		6263FE1828391E7900077948 /* MyWalletPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263FE1728391E7900077948 /* MyWalletPage.swift */; };
 		6263FE1A2839217E00077948 /* TrandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263FE192839217E00077948 /* TrandingView.swift */; };
+		6263FE1E283933B000077948 /* CryptoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263FE1D283933B000077948 /* CryptoDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		620964CF2838FFC30051B871 /* CryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoView.swift; sourceTree = "<group>"; };
 		6263FE1728391E7900077948 /* MyWalletPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletPage.swift; sourceTree = "<group>"; };
 		6263FE192839217E00077948 /* TrandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrandingView.swift; sourceTree = "<group>"; };
+		6263FE1D283933B000077948 /* CryptoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				620964CF2838FFC30051B871 /* CryptoView.swift */,
 				6263FE192839217E00077948 /* TrandingView.swift */,
 				6263FE1728391E7900077948 /* MyWalletPage.swift */,
+				6263FE1D283933B000077948 /* CryptoDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6263FE1E283933B000077948 /* CryptoDetails.swift in Sources */,
 				620964CD2838FF8B0051B871 /* CryptoModel.swift in Sources */,
 				620964C02838FDE10051B871 /* ContentView.swift in Sources */,
 				620964BE2838FDE10051B871 /* CryptoAppApp.swift in Sources */,

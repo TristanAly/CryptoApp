@@ -15,6 +15,8 @@ struct MyWalletPage: View {
             ScrollView{
                 VStack{
                     VStack(alignment: .leading,spacing: 15){
+                        Text("My Currency")
+                            .font(.largeTitle)
                         Text("77577.70 €")
                             .font(.title2)
                         Divider().frame(width: 350, height: 1).background(Color.white)
@@ -25,17 +27,23 @@ struct MyWalletPage: View {
                     ScrollView(.horizontal){
                         HStack{
                             ForEach(cryptoCurrency, id: \.name){ crypto in
-                                TrandingView(crypto: crypto)
+                                NavigationLink{
+                                    CryptoDetails(crypto: crypto)
+                                } label: { TrandingView(crypto: crypto)
+                                }
                             }
                         }
                     }
-                    VStack(alignment: .leading,spacing: 0.5){
+                    VStack(alignment: .leading,spacing: 1){
                         Text("My Wallet")
                             .font(.title)
                             .padding()
                         
                         ForEach(cryptoCurrency, id: \.name) { crypto in
-                            CryptoView(crypto: crypto)
+                            NavigationLink{
+                                CryptoDetails(crypto: crypto)
+                            } label: { CryptoView(crypto: crypto)
+                            }
                         }
                     }
                 }
@@ -43,7 +51,8 @@ struct MyWalletPage: View {
                 .background(Color("Background2"))
                 .ignoresSafeArea(.all)
                 
-            }.navigationTitle("My Currency")
+            }.navigationBarHidden(true)
+            .background(Color("Background2"))
         }
     }
 }
