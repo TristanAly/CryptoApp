@@ -59,6 +59,10 @@ struct CryptoDetails: View {
                  .foregroundColor(.white)
 //                Text("Quantity: \(Int(quantity))")
                 Spacer()
+               LineGraphView(data: Sample)
+                    .frame(maxHeight: 250)
+               
+                Spacer()
                 HStack{
                     Button{
                         quantity -= 1
@@ -85,8 +89,18 @@ struct CryptoDetails: View {
                 }
             }.padding()
         }.navigationBarTitleDisplayMode(.inline)
-            
-    }
+            .toolbar{
+                ToolbarItem{
+                    HStack{  Image(crypto.iconName)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    Text(crypto.symbol)
+                            .font(.callout)
+                        .foregroundColor(.white)
+                    }.padding(.horizontal)}
+                }
+            }
+
 }
 
 struct CryptoDetails_Previews: PreviewProvider {
@@ -94,3 +108,8 @@ struct CryptoDetails_Previews: PreviewProvider {
         CryptoDetails(crypto: cryptoCurrency[1])
     }
 }
+let Sample: [CGFloat] = [
+    989,1200,750,743,643,950,1200,600,500,890,1203,1400,867,900,1250,1600,1200
+]
+    
+

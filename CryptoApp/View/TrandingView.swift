@@ -12,7 +12,9 @@ struct TrandingView: View {
     let crypto: CryptoModel
     
     var body: some View {
-        
+        ZStack{
+           
+              
         VStack(alignment: .leading,spacing: 10){
             HStack{
                 Image(crypto.iconName)
@@ -28,7 +30,7 @@ struct TrandingView: View {
                 }
                 Spacer()
             }
-            VStack(alignment: .leading,spacing: 4){
+            VStack(alignment: .leading,spacing: 1){
             Text("\(String(format: "%.2F", crypto.value)) €")
                 HStack(spacing: 1){
                 if crypto.evolution > 0{
@@ -39,15 +41,16 @@ struct TrandingView: View {
                         .font(.caption)
                     
             }.foregroundColor(crypto.evolution > 0 ? Color.green : Color.red)
+                LineGraphView(data: Sample)
+                    .frame(maxHeight: 170)
             }
-            
         }
         .padding()
         .foregroundColor(.white)
-        .frame(width: 155, height: .infinity)
+        .frame(width: 200, height: 200)
         .background(Color("Background"))
         .cornerRadius(10)
-        
+        }
     }
 }
 
