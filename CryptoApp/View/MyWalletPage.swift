@@ -34,7 +34,7 @@ struct MyWalletPage: View {
                             }
                         }
                     }
-                    VStack(alignment: .leading,spacing: 1){
+                    VStack(alignment: .leading,spacing: 2){
                         Text("My Wallet")
                             .font(.title)
                             .padding()
@@ -42,7 +42,8 @@ struct MyWalletPage: View {
                         ForEach(cryptoCurrency, id: \.name) { crypto in
                             NavigationLink{
                                 CryptoDetails(crypto: crypto)
-                            } label: { CryptoView(crypto: crypto)
+                            } label: {
+                                 CryptoView(crypto: crypto)
                             }
                         }
                     }

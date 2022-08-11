@@ -10,6 +10,7 @@ import SwiftUI
 struct LineGraphView: View {
     
     var data: [CGFloat]
+    let crypto: CryptoModel
     
     var body: some View {
         GeometryReader{ proxy in
@@ -35,21 +36,32 @@ struct LineGraphView: View {
                 Path{ path in
                     path.move(to: CGPoint(x: 0, y: 0))
                     path.addLines(points)
-                    
+
                 }
                 .strokedPath(StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round))
                 .fill(
-                    LinearGradient(colors: [.red], startPoint: .leading, endPoint: .trailing))
-                
-                LinearGradient(colors: [.green,.green.opacity(0.8),.clear], startPoint: .top, endPoint: .bottom)
+                    LinearGradient(colors: [crypto.evolution > 0 ? .green : .red], startPoint: .leading, endPoint: .trailing))
+               if crypto.evolution > 0 {
+                    LinearGradient(colors: [.green,.green.opacity(0.8),.clear], startPoint: .top, endPoint: .bottom)
+                       .clipShape(
+                           Path{ path in
+                               path.move(to: CGPoint(x: 0, y: 0))
+                               path.addLines(points)
+
+                               path.addLine(to: CGPoint(x: proxy.size.width, y: height))
+                               path.addLine(to: CGPoint(x: 0, y: height))
+                           })
+               } else {
+                LinearGradient(colors: [.red,.red.opacity(0.8),.clear], startPoint: .top, endPoint: .bottom)
                     .clipShape(
                         Path{ path in
                             path.move(to: CGPoint(x: 0, y: 0))
                             path.addLines(points)
-                            
+
                             path.addLine(to: CGPoint(x: proxy.size.width, y: height))
                             path.addLine(to: CGPoint(x: 0, y: height))
                         })
+            }
             }
             
         }

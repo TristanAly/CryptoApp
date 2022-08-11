@@ -59,7 +59,7 @@ struct CryptoDetails: View {
                  .foregroundColor(.white)
 //                Text("Quantity: \(Int(quantity))")
                 Spacer()
-               LineGraphView(data: Sample)
+                LineGraphView(data: Sample, crypto: crypto)
                     .frame(maxHeight: 250)
                
                 Spacer()

@@ -41,7 +41,7 @@ struct TrandingView: View {
                         .font(.caption)
                     
             }.foregroundColor(crypto.evolution > 0 ? Color.green : Color.red)
-                LineGraphView(data: Sample)
+                LineGraphView(data: Sample, crypto: crypto)
                     .frame(maxHeight: 170)
             }
         }
